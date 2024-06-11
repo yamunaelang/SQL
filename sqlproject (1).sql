@@ -74,9 +74,9 @@ END;
 
 select * from Reservation;
 
----- Easy Level Queries
 
 -- What are the first names and last names of all the passengers who have made reservations in the 'Reservation' table?"
+
 SELECT First_name, Last_name 
 FROM Reservation;
 
