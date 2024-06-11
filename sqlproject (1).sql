@@ -80,7 +80,7 @@ select * from Reservation;
 SELECT First_name, Last_name 
 FROM Reservation;
 
---Show the different types of trains listed in the 'Reservation' table of the railway_system database?
+-- Show the different types of trains listed in the 'Reservation' table of the railway_system database?
 SELECT DISTINCT Train_type 
 FROM Reservation;
 
@@ -89,7 +89,8 @@ SELECT COUNT(*)
 FROM Reservation;
 
 --- What are the names of the passengers along with the names of the trains 
-they've booked,for reservations that are either confirmed or waiting in the 'Reservation' table of the railway_system database?"
+-- they've booked,for reservations that are either confirmed or waiting in the 'Reservation' table of the railway_system database?"
+
 SELECT   Train_name,First_name,Booking_status 
 FROM Reservation 
 WHERE Booking_status = 'Confirmed' OR Booking_status = 'Waiting';
@@ -111,7 +112,7 @@ FROM Reservation
 WHERE Booking_date between '2023-08-21' AND '2023-10-08' 
 order by Booking_date;
 
-**Medium Level Queries:**
+
 
 SELECT Train_name, Sum(fair) AS Reservation_price
 FROM Reservation
@@ -145,7 +146,7 @@ SELECT AVG(Fair)
 FROM Reservation 
 WHERE Booking_status = 'Confirmed';
 
-**High Level Queries:**
+
 
 SELECT First_name, Last_name, COUNT(*) AS Reservation_Count
 FROM Reservation
